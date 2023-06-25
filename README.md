@@ -61,17 +61,18 @@ Contract Overview
 Import Axelar ERC20 tokens
 Tokens transferred to an EVM chain using Axelar are not visible in Metamask until you import them.
 
-Use the "Networks" dropdown list, select your desired chain.
-View "Assets" and select "Import Tokens".
-Paste into "Token Contract Address" the ERC20 address for the token. ("Token symbol" and "token decimal" should be fetched automatically.)
-Axelar token contract addresses for each chain can be found at Testnet resources. https://docs.axelar.dev/resources/testnet
+1. Use the "Networks" dropdown list, select your desired chain.
+2. View "Assets" and select "Import Tokens".
+3. Paste into "Token Contract Address" the ERC20 address for the token. ("Token symbol" and "token decimal" should be fetched automatically.)
+4. Axelar token contract addresses for each chain can be found at Testnet resources. https://docs.axelar.dev/resources/testnet
 
 The Swap contract provides three functions for transferring tokens to Binance Smart Chain:
 
-sendUsdcToBinance: Transfers USDC tokens from the Polygon network to Binance Smart Chain.
-sendMaticToBinance: Transfers MATIC tokens from the Polygon network to Binance Smart Chain.
-sendBNBToBinance: Transfers BNB tokens from the Polygon network to Binance Smart Chain.
-Usage
+. sendUsdcToBinance: Transfers USDC tokens from the Polygon network to Binance Smart Chain.
+. sendMaticToBinance: Transfers MATIC tokens from the Polygon network to Binance Smart Chain.
+. sendBNBToBinance: Transfers BNB tokens from the Polygon network to Binance Smart Chain.
+
+>Usage
 Deploy the Swap contract, passing the following parameters:
 
 _gateway: The address of the Axelar Gateway contract.
@@ -82,9 +83,9 @@ Ensure that you Send some test token to the smartcontract before call function .
 
 Call the respective function based on the token you want to transfer to Binance Smart Chain:
 
-sendUsdcToBinance: Provide the amount of USDC tokens to transfer and the receiver's address on Binance Smart Chain.
-sendMaticToBinance: Provide the amount of MATIC tokens to transfer and the receiver's address on Binance Smart Chain.
-sendBNBToBinance: Provide the amount of BNB tokens to transfer and the receiver's address on Binance Smart Chain.
+. sendUsdcToBinance: Provide the amount of USDC tokens to transfer and the receiver's address on Binance Smart Chain.
+. sendMaticToBinance: Provide the amount of MATIC tokens to transfer and the receiver's address on Binance Smart Chain.
+. sendBNBToBinance: Provide the amount of BNB tokens to transfer and the receiver's address on Binance Smart Chain.
 Note
 Ensure that you have approved the transfer of tokens by calling the approve function on the respective token contract before executing the transfer functions.
 
