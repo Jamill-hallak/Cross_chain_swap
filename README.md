@@ -39,11 +39,11 @@ Modifiers:
 preventReentrancy: A modifier that prevents reentrancy attacks by checking the _locked variable.
 Functions:
 
-initiateSwap: Allows a participant to initiate a swap by providing the necessary details, including the swap ID, token address, participant address, time-lock duration, hashlock, and amount.
-checkHash: Checks if a provided secret hash matches the hashlock of a swap.
-executeSwap: Allows a participant to execute a swap by providing the secret. This function transfers the swapped tokens to the participant.
-refundSwap: Allows the initiator to refund a swap after the time-lock period has passed. The tokens are returned to the initiator.
-receive: A fallback function to receive ETH.
+- initiateSwap: Allows a participant to initiate a swap by providing the necessary details, including the swap ID, token address, participant address, time-lock duration, hashlock, and amount.
+- checkHash: Checks if a provided secret hash matches the hashlock of a swap.
+- executeSwap: Allows a participant to execute a swap by providing the secret. This function transfers the swapped tokens to the participant.
+- refundSwap: Allows the initiator to refund a swap after the time-lock period has passed. The tokens are returned to the initiator.
+- receive: A fallback function to receive ETH.
 
 # 2. Interoperability Protocols : 
 
@@ -68,24 +68,24 @@ Tokens transferred to an EVM chain using Axelar are not visible in Metamask unti
 
 The Swap contract provides three functions for transferring tokens to Binance Smart Chain:
 
-. sendUsdcToBinance: Transfers USDC tokens from the Polygon network to Binance Smart Chain.
-. sendMaticToBinance: Transfers MATIC tokens from the Polygon network to Binance Smart Chain.
-. sendBNBToBinance: Transfers BNB tokens from the Polygon network to Binance Smart Chain.
+- sendUsdcToBinance: Transfers USDC tokens from the Polygon network to Binance Smart Chain.
+- sendMaticToBinance: Transfers MATIC tokens from the Polygon network to Binance Smart Chain.
+- sendBNBToBinance: Transfers BNB tokens from the Polygon network to Binance Smart Chain.
 
 >Usage
 Deploy the Swap contract, passing the following parameters:
 
-_gateway: The address of the Axelar Gateway contract.
-_USD: The address of the aUSDC token contract. ()
-_MATIC: The address of the WMATIC token contract.()
-_BNB: The address of the WBNB token contract.()
+ -_gateway: The address of the Axelar Gateway contract.
+- _USD: The address of the aUSDC token contract. ()
+- _MATIC: The address of the WMATIC token contract.()
+- _BNB: The address of the WBNB token contract.()
 Ensure that you Send some test token to the smartcontract before call function .
 
 Call the respective function based on the token you want to transfer to Binance Smart Chain:
 
-. sendUsdcToBinance: Provide the amount of USDC tokens to transfer and the receiver's address on Binance Smart Chain.
-. sendMaticToBinance: Provide the amount of MATIC tokens to transfer and the receiver's address on Binance Smart Chain.
-. sendBNBToBinance: Provide the amount of BNB tokens to transfer and the receiver's address on Binance Smart Chain.
+- sendUsdcToBinance: Provide the amount of USDC tokens to transfer and the receiver's address on Binance Smart Chain.
+- sendMaticToBinance: Provide the amount of MATIC tokens to transfer and the receiver's address on Binance Smart Chain.
+- sendBNBToBinance: Provide the amount of BNB tokens to transfer and the receiver's address on Binance Smart Chain.
 Note
 Ensure that you have approved the transfer of tokens by calling the approve function on the respective token contract before executing the transfer functions.
 
