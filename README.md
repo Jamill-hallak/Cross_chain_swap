@@ -22,24 +22,25 @@ Here's a breakdown of the contract's main components and functions:
 
 # 1.Atomic Swap Structs:
 
-Swap: Defines the data structure for a swap, including initiator and participant addresses, token address, start time, time-lock duration, amount, and hashlock.
-State variables:
+- Swap: Defines the data structure for a swap, including initiator and participant addresses, token address, start time, time-lock duration, amount, and hashlock.
+- State variables:
 
 _locked: A boolean variable used to prevent reentrancy attacks.
 Mapping:
 
-swaps: Maps a swap ID to its corresponding Swap struct.
-Events:
+- swaps: Maps a swap ID to its corresponding Swap struct.
+- Events:
 
-SwapInitiated: Triggered when a swap is initiated.
-SwapExecuted: Triggered when a swap is executed.
-SwapRefunded: Triggered when a swap is refunded.
+- SwapInitiated: Triggered when a swap is initiated.
+- SwapExecuted: Triggered when a swap is executed.
+- SwapRefunded: Triggered when a swap is refunded.
 Modifiers:
 
-preventReentrancy: A modifier that prevents reentrancy attacks by checking the _locked variable.
+- preventReentrancy: A modifier that prevents reentrancy attacks by checking the _locked variable.
 Functions:
 
 - initiateSwap: Allows a participant to initiate a swap by providing the necessary details, including the swap ID, token address, participant address, time-lock duration, hashlock, and amount.
+ 
 - checkHash: Checks if a provided secret hash matches the hashlock of a swap.
 - executeSwap: Allows a participant to execute a swap by providing the secret. This function transfers the swapped tokens to the participant.
 - refundSwap: Allows the initiator to refund a swap after the time-lock period has passed. The tokens are returned to the initiator.
