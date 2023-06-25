@@ -23,20 +23,24 @@ Here's a breakdown of the contract's main components and functions:
 # 1.Atomic Swap Structs:
 
 - Swap: Defines the data structure for a swap, including initiator and participant addresses, token address, start time, time-lock duration, amount, and hashlock.
+  
 - State variables:
 
 _locked: A boolean variable used to prevent reentrancy attacks.
+
 Mapping:
 
 - swaps: Maps a swap ID to its corresponding Swap struct.
-- Events:
+Events:
 
 - SwapInitiated: Triggered when a swap is initiated.
 - SwapExecuted: Triggered when a swap is executed.
 - SwapRefunded: Triggered when a swap is refunded.
+  
 Modifiers:
 
 - preventReentrancy: A modifier that prevents reentrancy attacks by checking the _locked variable.
+  
 Functions:
 
 - initiateSwap: Allows a participant to initiate a swap by providing the necessary details, including the swap ID, token address, participant address, time-lock duration, hashlock, and amount.
@@ -80,7 +84,7 @@ Deploy the Swap contract, passing the following parameters:
 - _USD: The address of the aUSDC token contract. ()
 - _MATIC: The address of the WMATIC token contract.()
 - _BNB: The address of the WBNB token contract.()
-Ensure that you Send some test token to the smartcontract before call function .
+- Ensure that you Send some test token to the smartcontract before call function .
 
 Call the respective function based on the token you want to transfer to Binance Smart Chain:
 
