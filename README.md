@@ -1,4 +1,5 @@
 # Cross chain Swap
+![Example Image](hash1.png)
 
 # Cross-Chain Functionality 
 
@@ -94,10 +95,11 @@ This test suite consists of unit tests for AtomicSwap and cross-chain transactio
 # Getting Started
 To run the test suite, follow these steps:
 
-Clone the repository: git clone <>
-Install the required dependencies: npm install
-Configure the test environment and network settings if needed.
-Run the tests: npm test
+1. Clone the repository: git clone <https://github.com/Jamill-hallak/Cross_chain_swap.git>
+2. Install the required dependencies: npm install
+3. Configure the test environment and network settings if needed. You may need to modify the `hardhat.config.js` file in the project's root directory to set up the desired network settings and test accounts.
+4. Run the tests: npx hardhat test
+
 
 # Test Coverage
 The test suite covers the following scenarios:
@@ -119,10 +121,4 @@ Contributions to this test suite are welcome! If you find any issues or have sug
 
 
 # Contact
-If you have any questions or need further assistance, please contact Your Name.
-
-
-
-
-
-
+If you have any questions or need further assistance, please contact jamill.
