@@ -20,7 +20,7 @@ here are two smart contract called "BinanceAtomicSwap" "PolygonAtomicSwap" that 
 
 Here's a breakdown of the contract's main components and functions:
 
-# Structs:
+# 1.Atomic Swap Structs:
 
 Swap: Defines the data structure for a swap, including initiator and participant addresses, token address, start time, time-lock duration, amount, and hashlock.
 State variables:
