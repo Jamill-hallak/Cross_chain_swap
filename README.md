@@ -45,7 +45,7 @@ executeSwap: Allows a participant to execute a swap by providing the secret. Thi
 refundSwap: Allows the initiator to refund a swap after the time-lock period has passed. The tokens are returned to the initiator.
 receive: A fallback function to receive ETH.
 
-2. Interoperability Protocols : 
+# 2. Interoperability Protocols : 
 
 
 Cross-Chain Swap Smart Contract
